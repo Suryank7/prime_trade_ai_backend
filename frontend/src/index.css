@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-prime-dark text-prime-text font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-prime-card/60 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
+  
+  .neon-text {
+    @apply text-prime-accent drop-shadow-[0_0_8px_rgba(0,240,255,0.8)];
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden bg-gradient-to-r from-prime-accent to-prime-purple text-white font-medium py-2 px-4 rounded-lg 
+           transition-all duration-300 hover:shadow-[0_0_20px_rgba(176,38,255,0.4)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white/5 hover:bg-white/10 text-white font-medium py-2 px-4 rounded-lg border border-white/10
+           transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full bg-prime-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-prime-textMuted
+           focus:outline-none focus:ring-2 focus:ring-prime-accent/50 focus:border-prime-accent transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #151C2C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B026FF;
+}
+
+/* Toastify Custom Overrides */
+.Toastify__toast-theme--dark {
+  background: #151C2C !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
