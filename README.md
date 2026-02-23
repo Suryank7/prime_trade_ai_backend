@@ -117,4 +117,3 @@ NODE_ENV=production node dist/server.js
 
 ---
 
-*Engineered by Antigravity AI.*
